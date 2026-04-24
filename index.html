@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI SP - Smart Hub IoT</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main-wrapper">
+
+        <header>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/SENAI_S%C3%A3o_Paulo_logo.png/1280px-SENAI_S%C3%A3o_Paulo_logo.png" alt="Logo SENAI SP" class="logo-senai">
+            <h1>Smart Hub IoT</h1>
+            <p>Gerenciamento de Iluminação</p>
+        </header>
+
+          <!-- BOTÕES GLOBAIS AGORA NO LUGAR CERTO -->
+        <div class="botoes-globais">
+            <button id="lp-ligarTudo" class="btn btn-ligar" onclick="ligarTudo()">Ligar Tudo</button>
+            <button id="lp-desligarTudo" class="btn btn-desligar" onclick="desligarTudo()">Desligar Tudo</button>
+        </div>
+
+
+        <div class="dashboard-grid">
+            
+            <main class="card">
+                <h2>Lâmpada da Sala</h2>
+                <div class="display-lampada">
+                    <div id="lp-sala" class="lampada">💡</div>
+                </div>
+                <div class="controles">
+                    <button class="btn btn-ligar" onclick="ligarLampadaSala1()">Ligar</button>
+                    <button class="btn btn-desligar" onclick="desligarLampadaSala1()">Desligar</button>
+                </div>
+            </main>
+
+            <main class="card">
+                <h2>Lâmpada da Cozinha</h2>
+                <div class="display-lampada">
+                    <div id="lp-cozinha" class="lampada">💡</div>
+                </div>
+                <div class="controles">
+                    <button class="btn btn-ligar" onclick="ligarLampadaSala2()">Ligar</button>
+                    <button class="btn btn-desligar" onclick="desligarLampadaSala2()">Desligar</button>
+                </div>
+            </main>
+
+            <main class="card">
+                <h2>Lâmpada do Quarto 1</h2>
+                <div class="display-lampada">
+                    <div id="lp-quarto1" class="lampada">💡</div>
+                </div>
+                <div class="controles">
+                    <button class="btn btn-ligar" onclick="ligarLampadaSala3()">Ligar</button>
+                    <button class="btn btn-desligar" onclick="desligarLampadaSala3()">Desligar</button>
+                </div>
+            </main>
+
+            <main class="card">
+                <h2>Lâmpada do Quarto 2</h2>
+                <div class="display-lampada">
+                    <div id="lp-quarto2" class="lampada">💡</div>
+                </div>
+                <div class="controles">
+                    <button class="btn btn-ligar" onclick="ligarLampadaSala4()">Ligar</button>
+                    <button class="btn btn-desligar" onclick="desligarLampadaSala4()">Desligar</button>
+                </div>
+            </main>
+
+        </div>
+
+    </div>
+
+    <script src="mqttws31.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
